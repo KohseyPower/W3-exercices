@@ -1,10 +1,7 @@
-let d = new Date();
-let christmasD = new Date(2022, 11, 24);
-
-let i = 0;
-while (d.getTime() != christmasD.getTime()) {
-    i = i+1;
-    d.setDate(d.getDate() + 1);
-
+today = new Date();
+let cmas = new Date(today.getFullYear(), 11, 25);
+if (today.getMonth() == 11 && today.getDate() > 25) {
+    cmas.setFullYear(cmas.getFullYear() + 1);
 }
-console.log("There is " +" "+ i + " days before christmas !");
+let one_day = 1000 * 60 * 60 * 24;
+console.log(Math.ceil((cmas.getTime() - today.getTime()) / (one_day)) + " days left until Christmas!");

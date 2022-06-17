@@ -1,8 +1,11 @@
 let number = Math.ceil(Math.random() * 10);
-let inputNumber = document.querySelector("input");
 
-if (number === inputNumber) {
-    document.querySelector("p").textContent = "Good Work";
-} else {
-    document.querySelector("p").textContent = "Not Matched";
-}
+document.addEventListener('keydown', function(e) {
+    let inputNumber = document.querySelector("input").value;
+    if (number == inputNumber) {
+
+        document.querySelector(".result").textContent = "Good Work";
+    } else {
+        document.querySelector(".result").textContent = "Not Matched";
+    }
+})
